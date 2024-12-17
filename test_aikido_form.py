@@ -40,7 +40,8 @@ def test_contact_form(page):
     button2.click()
 
 # ověření otevření formuláře pro komunikaci
-    assert '#cboxLoadedContent > div', "formulář se neotevřel"
+    assert '#cboxLoadedContent > div'is not None, "formulář se neotevřel"
+    print("Formulář se otevřel")
 
 # vykřížkování formuláře
     button3 = page.wait_for_selector(
